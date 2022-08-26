@@ -6,7 +6,7 @@ public class MeioFixo extends Embaralhador {
 	private String palavra;
 	
 	
-	private void setPalavra(String palavra) {
+	private void definePalavra(String palavra) {
 		this.palavra = palavra;
 	}
 	
@@ -19,7 +19,6 @@ public class MeioFixo extends Embaralhador {
 	}
 		
 	private String pegaMeio() {
-
 		return this.palavra.substring(this.meioIndex-1, this.meioIndex);
 	}
 	
@@ -34,7 +33,7 @@ public class MeioFixo extends Embaralhador {
 	
 	@Override
 	public String embaralhaPalavra(String palavra) {
-		this.setPalavra(palavra);
+		this.definePalavra(palavra);
 		this.defineMeioIndex();
 		String palavraEmbaralhada = "";
 		do {

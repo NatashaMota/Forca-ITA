@@ -19,7 +19,7 @@ public class BancoDePalavras {
 		this.embaralhaPalavras();
 	}
 	
-	public String getPalavraAleatoria() {
+	public String pegaPalavraAleatoria() {
 		if (indice < palavras.size()) {
 			//exception
 		}

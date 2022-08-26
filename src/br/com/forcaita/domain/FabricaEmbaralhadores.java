@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class FabricaEmbaralhadores {
 	
-	ArrayList<Embaralhador> embaralhadores = new ArrayList<Embaralhador>(); 
+	private ArrayList<Embaralhador> embaralhadores = new ArrayList<Embaralhador>(); 
 	
 	public FabricaEmbaralhadores() {
 		this.carregaEmbaralhadores();	
@@ -21,7 +21,7 @@ public class FabricaEmbaralhadores {
 	}
 	
 	
-	public Embaralhador getEmbaralhadorAleatorio() {
+	public Embaralhador pegaEmbaralhadorAleatorio() {
 		this.embaralhaEmbaralhadores();
 		return this.embaralhadores.get(0);
 	}

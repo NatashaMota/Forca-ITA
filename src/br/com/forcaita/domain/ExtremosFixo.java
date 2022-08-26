@@ -6,7 +6,7 @@ public class ExtremosFixo extends Embaralhador {
 	private String fim;
 	private String meio; 
 	
-	private void setMeio(String palavra) {
+	private void defineMeio(String palavra) {
 		this.meio = palavra.substring(1, palavra.length()-1);
 	}
 	
@@ -27,7 +27,7 @@ public class ExtremosFixo extends Embaralhador {
 	public String embaralhaPalavra(String palavra) {
 		
 		this.fixaExtremos(palavra);
-		this.setMeio(palavra);
+		this.defineMeio(palavra);
 		this.embaralhaMeio(); 
 		
 		return this.inicio + this.meio + this.fim;

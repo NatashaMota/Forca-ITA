@@ -7,10 +7,10 @@ public abstract class Embaralhador {
 
 	public abstract String embaralhaPalavra(String palavra);
 
-	protected String embaralhaTexto(String string) {
+	protected String embaralhaTexto(String texto) {
 		String textoEmbaralhado = "";	
 		ArrayList<Character> textoArray = new ArrayList<Character>();
-		for (char letra: string.toCharArray()) {
+		for (char letra: texto.toCharArray()) {
 			textoArray.add(letra);
 		}
 		Collections.shuffle(textoArray);

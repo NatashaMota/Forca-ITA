@@ -1,14 +1,13 @@
 package br.com.forcaita.domain;
 
 public class AcertaOuMorre extends MecanicaDoJogo {
-	int vida;
 	
 	public AcertaOuMorre() {
 		this.vida = 1;
 	}
 	
 	@Override
-	public String getSlogan() {
+	public String pegaSlogan() {
 		return "Acerte ou morra!";
 	}
 
@@ -22,13 +21,15 @@ public class AcertaOuMorre extends MecanicaDoJogo {
 
 	@Override
 	protected void contaPontos() {
+		int pontos;
 		if (this.getRound() <= 5) {
-			this.pontos += 10;
+			pontos = 10;
 		} else if (this.getRound() <= 15) {
-			this.pontos += 15;
+			pontos = 15;
 		} else {
-			this.pontos += 20;
+			pontos = 20;
 		}
+		this.setPontos(pontos);
 	}
 
 	@Override

@@ -4,11 +4,7 @@ import java.util.Collections;
 
 public class FabricaMecanicaDoJogo {
 		
-	ArrayList<MecanicaDoJogo> mecanicas = new ArrayList<MecanicaDoJogo>(); 
-		
-	public FabricaMecanicaDoJogo() {
-	
-	}
+	private ArrayList<MecanicaDoJogo> mecanicas = new ArrayList<MecanicaDoJogo>(); 
 		
 	private void carregaMecanicas() {
 		this.mecanicas.add(new AcertaOuMorre());
@@ -18,9 +14,8 @@ public class FabricaMecanicaDoJogo {
 	private void embaralhaMecanicas() {
 		Collections.shuffle(this.mecanicas);
 	}
-		
-		
-	public MecanicaDoJogo getMecanicaAleatoria() {
+				
+	public MecanicaDoJogo pegaMecanicaAleatoria() {
 		this.mecanicas.clear();
 		this.carregaMecanicas();
 		this.embaralhaMecanicas();

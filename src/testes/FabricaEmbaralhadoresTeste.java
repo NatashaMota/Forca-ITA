@@ -22,8 +22,8 @@ public class FabricaEmbaralhadoresTeste {
 	public void retornaEmbaralhador() {		
 		Embaralhador embaralhador1;
 		Embaralhador embaralhador2;
-		embaralhador1 = this.fabricaEmbaralhador.getEmbaralhadorAleatorio();
-		embaralhador2 = this.fabricaEmbaralhador.getEmbaralhadorAleatorio();
+		embaralhador1 = this.fabricaEmbaralhador.pegaEmbaralhadorAleatorio();
+		embaralhador2 = this.fabricaEmbaralhador.pegaEmbaralhadorAleatorio();
 		assertEquals(true, embaralhador1 instanceof Embaralhador && embaralhador2 instanceof Embaralhador);
 		assertEquals(true, embaralhador1 instanceof ExtremosFixo || embaralhador1 instanceof MeioFixo);
 		assertEquals(true, embaralhador2 instanceof ExtremosFixo || embaralhador2 instanceof MeioFixo);
@@ -33,7 +33,7 @@ public class FabricaEmbaralhadoresTeste {
 	public void embaralhadoExtremosFixo() {
 		Embaralhador embaralhador;
 		while (true) {
-			embaralhador = this.fabricaEmbaralhador.getEmbaralhadorAleatorio();
+			embaralhador = this.fabricaEmbaralhador.pegaEmbaralhadorAleatorio();
 			if (embaralhador instanceof ExtremosFixo) {
 				assertEquals(false, embaralhador.embaralhaPalavra("chapeu") == "chapeu");
 				assertEquals(true, (embaralhador.embaralhaPalavra("chapeu")).charAt(0) == 'c');
@@ -50,7 +50,7 @@ public class FabricaEmbaralhadoresTeste {
 	public void embaralhadoMeioFixo() {
 		Embaralhador embaralhador;
 		while (true) {
-			embaralhador = this.fabricaEmbaralhador.getEmbaralhadorAleatorio();
+			embaralhador = this.fabricaEmbaralhador.pegaEmbaralhadorAleatorio();
 			if (embaralhador instanceof MeioFixo) {
 				assertEquals(false, embaralhador.embaralhaPalavra("chapeu").equals("chapeu"));
 				assertEquals(true, (embaralhador.embaralhaPalavra("chapeu")).charAt(2) == 'a');

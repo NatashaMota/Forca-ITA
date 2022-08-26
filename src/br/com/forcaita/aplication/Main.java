@@ -17,7 +17,7 @@ public class Main {
 		int op = 1;
 		while(op == 1) {
 			
-			mecanicaJogo = fabricaMecanica.getMecanicaAleatoria();			
+			mecanicaJogo = fabricaMecanica.pegaMecanicaAleatoria();			
 			
 			exibeIniciarJogo();
 			op = Integer.parseInt(scan.nextLine()); 
@@ -25,7 +25,7 @@ public class Main {
 				break;
 			}
 			while (mecanicaJogo.temProximoRound()) {
-				exibePalavraComSlogan(mecanicaJogo.getSlogan(), mecanicaJogo.getPalavraEmbaralhada());
+				exibePalavraComSlogan(mecanicaJogo.pegaSlogan(), mecanicaJogo.getPalavraEmbaralhada());
 				resposta = pegaResposta();
 				exibeResultado(mecanicaJogo.verificaResposta(resposta));			
 			}		

@@ -1,14 +1,13 @@
 package br.com.forcaita.domain;
 
 public class VidaDeGato extends MecanicaDoJogo {
-	private int vida;
 	
 	public VidaDeGato() {
 		this.vida = 7;
 	}
 	
 	@Override
-	public String getSlogan() {
+	public String pegaSlogan() {
 		return "Você tem " + this.vida + " vidas, gatinho.";
 	}
 
@@ -22,19 +21,17 @@ public class VidaDeGato extends MecanicaDoJogo {
 
 	@Override
 	protected void contaPontos() {
-		this.pontos += this.vida;
+		this.setPontos(this.vida);
 		
 	}
 
 	@Override
 	protected void respostaErrada() {
 		this.vida--;
-		if (this.pontos >= 5) {
-			this.pontos -= 5;
+		if (this.getPontos() >= 5) {
+			this.setPontos(-5);
 		} else {
-			this.pontos = 0;
-		}
-		
-		
+			this.setPontos(0);
+		}	
 	}
 }

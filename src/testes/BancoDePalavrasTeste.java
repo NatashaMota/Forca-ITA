@@ -42,7 +42,7 @@ public class BancoDePalavrasTeste {
 	
 	@Test
 	public void leituraArquivo() {
-		assertEquals(true, this.palavrasTeste.contains(this.bancoPalavras.getPalavraAleatoria()));		
+		assertEquals(true, this.palavrasTeste.contains(this.bancoPalavras.pegaPalavraAleatoria()));		
 		//assertEquals(true, this.bancoPalavras.getPalavraAleatoria().equals(palavrasTeste.get(0)));
 		//assertEquals(true, this.bancoPalavras.getPalavraAleatoria().equals(palavrasTeste.get(19)));
 		
@@ -54,7 +54,7 @@ public class BancoDePalavrasTeste {
 		ArrayList<String> palavrasSorteadasTeste = new ArrayList<String>();
 		
 		for (int i=0; i<=19; i++);
-			palavraSorteadaTeste = this.bancoPalavras.getPalavraAleatoria();
+			palavraSorteadaTeste = this.bancoPalavras.pegaPalavraAleatoria();
 			assertEquals(false, palavrasSorteadasTeste.contains(palavraSorteadaTeste));
 			palavrasSorteadasTeste.add(palavraSorteadaTeste);
 	}

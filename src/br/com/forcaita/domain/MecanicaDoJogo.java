@@ -3,10 +3,11 @@ package br.com.forcaita.domain;
 public abstract class MecanicaDoJogo {
 	private int round;
 	private int acertos;
-	protected int pontos;
+	private int pontos;
 	private String resposta;
 	private String palavra;
 	private String palavraEmbaralhada;
+	protected int vida;
 	
 	private Embaralhador embaralhador;
 	private BancoDePalavras bancoPalavras = new BancoDePalavras();
@@ -36,14 +37,14 @@ public abstract class MecanicaDoJogo {
 	}
 	
 	private void embaralhaPalavra() {
-		this.embaralhador = this.fabricaEmbaralhadores.getEmbaralhadorAleatorio();
+		this.embaralhador = this.fabricaEmbaralhadores.pegaEmbaralhadorAleatorio();
 		this.palavraEmbaralhada = this.embaralhador.embaralhaPalavra(this.palavra);
 		
 	}
 	
 	private boolean pegaPalavra() {
 		if (this.palavra.equals(this.resposta)) {
-			this.palavra = this.bancoPalavras.getPalavraAleatoria();
+			this.palavra = this.bancoPalavras.pegaPalavraAleatoria();
 		}
 		return !palavra.equals("");
 	}	
@@ -64,6 +65,10 @@ public abstract class MecanicaDoJogo {
 		return this.pontos;
 	}
 	
+	protected void setPontos(int pontos) {
+		this.pontos += pontos;
+	}
+	
 	public int getRound() {
 		return this.round;
 	}
@@ -76,7 +81,7 @@ public abstract class MecanicaDoJogo {
 		return this.palavraEmbaralhada;
 	}
 	
-	public abstract String getSlogan();
+	public abstract String pegaSlogan();
 	
 	public abstract boolean temProximoRound();
 
