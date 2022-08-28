@@ -7,16 +7,11 @@ import org.junit.Test;
 
 import br.com.forcaita.domain.Embaralhador;
 import br.com.forcaita.domain.ExtremosFixo;
-import br.com.forcaita.domain.FabricaEmbaralhadores;
 import br.com.forcaita.domain.MeioFixo;
+import br.com.forcaita.domain.util.FabricaEmbaralhadores;
 
 public class FabricaEmbaralhadoresTeste {
 	FabricaEmbaralhadores fabricaEmbaralhador = new FabricaEmbaralhadores();
-	
-	@Before
-	public void criaEmbaralhador() {
-		
-	}
 	
 	@Test
 	public void retornaEmbaralhador() {		

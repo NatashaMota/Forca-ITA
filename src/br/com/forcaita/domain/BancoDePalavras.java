@@ -32,7 +32,7 @@ public class BancoDePalavras {
 	}
 	
 	private void carregaPalavrasTXT(){
-		String filePath = "/home/aluna/eclipse-workspace/Forca-ITA/dados/animais_palavras.txt";
+		String filePath = "/home/aluna/git/Forca-ITA/dados/animais_palavras.txt";
 		try {
 			Scanner scan = new Scanner(new File(filePath));
 			while(scan.hasNext()) {

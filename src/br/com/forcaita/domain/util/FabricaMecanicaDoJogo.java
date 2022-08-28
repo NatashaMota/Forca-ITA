@@ -1,6 +1,10 @@
-package br.com.forcaita.domain;
+package br.com.forcaita.domain.util;
 import java.util.ArrayList;
 import java.util.Collections;
+
+import br.com.forcaita.domain.AcertaOuMorre;
+import br.com.forcaita.domain.MecanicaDoJogo;
+import br.com.forcaita.domain.VidaDeGato;
 
 public class FabricaMecanicaDoJogo {
 		

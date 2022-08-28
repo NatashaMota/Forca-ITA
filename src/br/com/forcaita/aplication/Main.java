@@ -2,8 +2,8 @@ package br.com.forcaita.aplication;
 
 import java.util.Scanner;
 
-import br.com.forcaita.domain.FabricaMecanicaDoJogo;
 import br.com.forcaita.domain.MecanicaDoJogo;
+import br.com.forcaita.domain.util.FabricaMecanicaDoJogo;
 
 public class Main {	
 	private final static Scanner scan = new Scanner(System.in);

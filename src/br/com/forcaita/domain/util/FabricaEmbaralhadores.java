@@ -1,7 +1,11 @@
-package br.com.forcaita.domain;
+package br.com.forcaita.domain.util;
 
 import java.util.ArrayList;
 import java.util.Collections;
+
+import br.com.forcaita.domain.Embaralhador;
+import br.com.forcaita.domain.ExtremosFixo;
+import br.com.forcaita.domain.MeioFixo;
 
 public class FabricaEmbaralhadores {
 	

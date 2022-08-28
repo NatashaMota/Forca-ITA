@@ -1,5 +1,7 @@
 package br.com.forcaita.domain;
 
+import br.com.forcaita.domain.util.FabricaEmbaralhadores;
+
 public abstract class MecanicaDoJogo {
 	private int round;
 	private int acertos;
